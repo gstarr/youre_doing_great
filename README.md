@@ -1,2 +1,2 @@
-# youre_doing_great
+# You're Doing Great!
 Makes you feel better about life (online)
