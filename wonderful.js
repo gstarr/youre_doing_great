@@ -7,7 +7,7 @@ function onTwitter(name) {
 
 function doReplace() {
     console.log("do replace here");
-    multipyFollowers()
+    multipyFollowers(2)
 }
 function multipyFollowers(n) {
    var htmlCollection = document.getElementsByClassName("ProfileNav-value")
@@ -29,6 +29,7 @@ function truncateNumber(n) {
 function humanizeNumber(value) {
     if (value >= 10000) {
         console.log('hi')
+    }
         
 
 }
@@ -44,4 +45,4 @@ function unhumanizeNumber(value) {
 }
 
 // starts app
-onTwitter("GrahamStarr");
+onTwitter("GrahamStarr")
