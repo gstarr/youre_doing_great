@@ -1,17 +1,14 @@
 
-function onTwitter() {
-  if (document.URL.includes("twitter.com")) {
+function onTwitter(name) {
+  if (document.URL.includes("twitter.com/" + name)) {
       doReplace();
   }
 }
 
 function doReplace() {
     console.log("do replace here");
-    multipyFollowers(100000)
+    multipyFollowers()
 }
-
-onTwitter();
-
 function multipyFollowers(n) {
    var htmlCollection = document.getElementsByClassName("ProfileNav-value")
    // get followers
@@ -21,14 +18,23 @@ function multipyFollowers(n) {
 }
 
 function multipyAndConvert(value, n ) {
-    console.log(value, n);
-    console.log(typeof(value))
-    var _val = (value * Math.random() * n * n)
-    console.log(_val)
-    return _val
+    var _val = (value * (Math.random() +1) * n)
+    return truncateNumber(_val)
+}
+
+function truncateNumber(n) {
+    return Math.floor(n)
 }
 
 function humanizeNumber(value) {
+    if (value >= 10000) {
+        console.log('hi')
+        
+
+}
+
+
+function unhumanizeNumber(value) {
     if (value.includes("M") || value.includes("K")) {
         value = parseInt(value.split("M")[0])
         return value
@@ -37,6 +43,5 @@ function humanizeNumber(value) {
 
 }
 
-
-
-
+// starts app
+onTwitter("GrahamStarr");
