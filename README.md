@@ -1,2 +1,2 @@
 # You're Doing Great!
-Makes you feel better about life! (online)
+Makes you feel better about life (online)
